@@ -14,7 +14,7 @@
     <!-- Open Graph / Social Media SEO -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Vindhyawasini Video Mixing Lab | Award-Winning Wedding Cinematography">
-    <meta property="og:description" content="Preserving royal Indian wedding traditions with high-definition cinematic films, drone footage, and candid photography. View our Youtube films and photo gallery.">
+    <meta property="og:description" content="Preserving royal Indian wedding traditions with high-definition cinematic photography, drone footage, and fine-art wedding coverage. Explore our wedding portfolio and services.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://vindhyawasinimixinglab.com">
 
@@ -71,7 +71,7 @@
       },
       "sameAs": [
         "https://www.youtube.com/@vindhyawasinimixinglab",
-        "https://www.instagram.com/vindhyawasini_mixing_lab",
+        "https://www.instagram.com/vindhyawasinilab/",
         "https://www.justdial.com/Sultanpur/Vindhaywasini-Video-Mixing-Lab-Near-Over-Bridge-Civil-Line/9999P5362-5362-210528122513-E3E3_BZDET"
       ]
     }
@@ -91,132 +91,55 @@
             </a>
             <nav>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#cinema">YouTube Films</a></li>
+                    <li class="nav-close-row"><button type="button" class="nav-close-btn" id="mobileNavClose" aria-label="Close navigation"><i class="fa-solid fa-xmark"></i><span>Close</span></button></li>
                     <li><a href="#gallery">Photo Gallery</a></li>
-                    <li><a href="#packages">Wedding Packages</a></li>
+                    <li><a href="packages.html">Pricing</a></li>
                     <li><a href="#instagram">Instagram Feed</a></li>
                     <li><a href="#contact">Book Dates</a></li>
                 </ul>
             </nav>
-            <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle Mobile Navigation">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
 
-    <section class="hero">
-        <!-- High Quality Background Video / Still with Bridal Overlay -->
-        <video class="hero-video-bg" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1920&q=80">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-indian-bride-wearing-traditional-jewelry-41221-large.mp4" type="video/mp4">
-        </video>
+    <section class="hero" aria-label="Wedding photography highlights">
+        <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide is-active" style="--hero-image: url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1519225421980-888cb2b88fce?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        <div class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1920&q=85')" aria-hidden="true"></div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title-brand">VINDHYAWASINI STUDIO</h1>
             <h2 class="hero-title" style="font-size: clamp(1.8rem, 3.8vw, 3.2rem);">Wedding stories, <span>beautifully told.</span></h2>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="#cinema" class="btn btn-gold"><i class="fa-solid fa-play"></i> Explore Our Work</a>
+                <a href="#gallery" class="btn btn-gold"><i class="fa-solid fa-play"></i> Explore Our Work</a>
                 <a href="#contact" class="btn btn-outline-gold"><i class="fa-solid fa-calendar-check"></i> Book Your Date</a>
             </div>
         </div>
-    </section>
-
-    <section class="marquee-section" aria-label="Infinite Photo Highlights">
-        <div class="marquee-track">
-            <!-- First Set of Images -->
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Royal Wedding Couple" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Royal Pheras</span></div>
+        <div class="hero-carousel-controls" aria-label="Hero photo controls">
+            <button class="hero-arrow" id="heroPrev" type="button" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="hero-dots" role="group" aria-label="Choose a hero photo">
+                <button class="hero-dot is-active" type="button" data-slide="0" aria-label="Show photo 1" aria-pressed="true"></button>
+                <button class="hero-dot" type="button" data-slide="1" aria-label="Show photo 2" aria-pressed="false"></button>
+                <button class="hero-dot" type="button" data-slide="2" aria-label="Show photo 3" aria-pressed="false"></button>
+                <button class="hero-dot" type="button" data-slide="3" aria-label="Show photo 4" aria-pressed="false"></button>
+                <button class="hero-dot" type="button" data-slide="4" aria-label="Show photo 5" aria-pressed="false"></button>
+                <button class="hero-dot" type="button" data-slide="5" aria-label="Show photo 6" aria-pressed="false"></button>
+                <button class="hero-dot" type="button" data-slide="6" aria-label="Show photo 7" aria-pressed="false"></button>
+                <button class="hero-dot" type="button" data-slide="7" aria-label="Show photo 8" aria-pressed="false"></button>
+                <button class="hero-dot" type="button" data-slide="8" aria-label="Show photo 9" aria-pressed="false"></button>
             </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Bridal Lehengha Details" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Bridal Portrait</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Pre Wedding Shoot" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Romantic Pre-Wedding</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Haldi Celebration" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Golden Haldi</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Indian Jewellery" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Cultural Craft</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=600&q=80" alt="Sangeet Night" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Grand Sangeet</span></div>
-            </div>
-
-            <!-- Duplicate Set for Seamless Infinite Loop -->
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Royal Wedding Couple" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Royal Pheras</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Bridal Lehengha Details" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Bridal Portrait</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Pre Wedding Shoot" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Romantic Pre-Wedding</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Haldi Celebration" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Golden Haldi</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Indian Jewellery" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Cultural Craft</span></div>
-            </div>
-            <div class="marquee-card">
-                <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=600&q=80" alt="Sangeet Night" loading="lazy">
-                <div class="marquee-card-overlay"><span class="marquee-card-title">Grand Sangeet</span></div>
-            </div>
+            <button class="hero-arrow" id="heroNext" type="button" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <section id="cinema" class="section-padding cinema-section">
-        <div class="container">
-            <div class="text-center">
-                <span class="subtitle-tag"><i class="fa-brands fa-youtube" style="color:#FF0000;"></i> YouTube Cinema Theater</span>
-                <h2 class="section-heading">Featured Wedding Teasers & Films</h2>
-                <p style="max-width: 650px; margin: 0 auto 40px;">Experience our signature 4K color-graded video mixing and cinematic storytelling directly on YouTube.</p>
-            </div>
-
-            <div class="cinema-grid">
-                <!-- YouTube Video Card 1 -->
-                <article class="cinema-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube-nocookie.com/embed/FEfMHFzLASI?rel=0" title="Royal Indian Wedding Film | Vindhyawasini Mixing Lab" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="cinema-card-body">
-                        <span class="cinema-card-tag">Full Wedding Teaser</span>
-                        <h3 class="cinema-card-title font-serif">The Royal Wedding Highlights | Sultanpur Palace</h3>
-                        <p>Cinematic drone entry, emotional jaymala moments, and high-speed candid color mixing.</p>
-                    </div>
-                </article>
-
-                <!-- YouTube Video Card 2 -->
-                <article class="cinema-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube-nocookie.com/embed/FEfMHFzLASI?rel=0" title="Pre Wedding Film | Vindhyawasini Video Mixing Lab" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                    <div class="cinema-card-body">
-                        <span class="cinema-card-tag">Pre-Wedding Story</span>
-                        <h3 class="cinema-card-title font-serif">A Forever Beginning | Romantic Film</h3>
-                        <p>A picturesque outdoor shoot capturing unscripted laughter and scenic twilight aerial perspectives.</p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="https://www.youtube.com/@vindhyawasinimixinglab" target="_blank" class="btn btn-yt">
-                    <i class="fa-brands fa-youtube"></i> Visit Our Official YouTube Channel
-                </a>
-            </div>
-        </div>
-    </section>
 
     <section id="gallery" class="section-padding">
         <div class="container">
@@ -232,186 +155,223 @@
                 <button class="filter-btn" data-filter="ceremony">Pheras & Rituals</button>
                 <button class="filter-btn" data-filter="prewedding">Pre-Wedding</button>
                 <button class="filter-btn" data-filter="haldi">Haldi & Mehendi</button>
+                <button class="filter-btn" data-filter="engagement">Engagement</button>
+                <button class="filter-btn" data-filter="maternity">Maternity</button>
+                <button class="filter-btn" data-filter="baby">Baby</button>
+                <button class="filter-btn" data-filter="product">Product</button>
             </div>
 
             <div class="gallery-masonry" id="galleryGrid">
-                <div class="gallery-item" data-category="bridal">
-                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80" alt="Royal Bridal Lehengha & Jewelry" loading="lazy">
+                <div class="gallery-item gallery-item--landscape" data-category="bridal">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=82" alt="Bridal portrait with traditional wedding details" loading="lazy">
                     <div class="gallery-item-overlay">
-                        <i class="fa-solid fa-expand"></i>
-                        <span style="font-size: 0.85rem;">View High-Res</span>
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
                     </div>
                 </div>
-                <div class="gallery-item" data-category="ceremony">
-                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Sacred Pheras Ritual" loading="lazy">
+                <div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=82" alt="Wedding couple during their ceremony" loading="lazy">
                     <div class="gallery-item-overlay">
-                        <i class="fa-solid fa-expand"></i>
-                        <span style="font-size: 0.85rem;">View High-Res</span>
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
                     </div>
                 </div>
-                <div class="gallery-item" data-category="prewedding">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Sunset Pre Wedding Shoot" loading="lazy">
+                <div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=82" alt="Couple enjoying a pre-wedding portrait" loading="lazy">
                     <div class="gallery-item-overlay">
-                        <i class="fa-solid fa-expand"></i>
-                        <span style="font-size: 0.85rem;">View High-Res</span>
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
                     </div>
                 </div>
-                <div class="gallery-item" data-category="haldi">
-                    <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80" alt="Vibrant Haldi Ceremony" loading="lazy">
+                <div class="gallery-item gallery-item--landscape" data-category="ceremony">
+                    <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=82" alt="Bright haldi ceremony celebration" loading="lazy">
                     <div class="gallery-item-overlay">
-                        <i class="fa-solid fa-expand"></i>
-                        <span style="font-size: 0.85rem;">View High-Res</span>
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
                     </div>
                 </div>
-                <div class="gallery-item" data-category="bridal">
-                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Traditional Indian Bride Makeup" loading="lazy">
+                <div class="gallery-item gallery-item--portrait" data-category="ceremony">
+                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=82" alt="Traditional bridal jewelry and attire" loading="lazy">
                     <div class="gallery-item-overlay">
-                        <i class="fa-solid fa-expand"></i>
-                        <span style="font-size: 0.85rem;">View High-Res</span>
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
                     </div>
                 </div>
-                <div class="gallery-item" data-category="ceremony">
-                    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80" alt="Groom & Bride Ring Exchange" loading="lazy">
+                <div class="gallery-item gallery-item--landscape" data-category="ceremony">
+                    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=900&q=82" alt="Wedding celebration with family and friends" loading="lazy">
                     <div class="gallery-item-overlay">
-                        <i class="fa-solid fa-expand"></i>
-                        <span style="font-size: 0.85rem;">View High-Res</span>
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="gallery-item gallery-item--portrait" data-category="prewedding">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=82" alt="Elegant wedding ceremony details" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="prewedding">
+                    <img src="https://images.unsplash.com/photo-1519225421980-888cb2b88fce?auto=format&fit=crop&w=900&q=82" alt="A romantic wedding day portrait" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--landscape" data-category="prewedding">
+                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=82" alt="A couple celebrating their wedding" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="haldi">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=82" alt="Candid wedding celebration" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--landscape" data-category="haldi">
+                    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=82" alt="A joyful wedding couple portrait" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="haldi">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=82" alt="Wedding venue and celebration details" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="engagement">
+                    <img src="https://images.unsplash.com/photo-1520857014576-2c4f4c972b57?auto=format&fit=crop&w=900&q=82" alt="A colorful Indian wedding moment" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--landscape" data-category="engagement">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=900&q=82" alt="Traditional wedding ceremony" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="engagement">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=82" alt="Couple portrait at the wedding" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--landscape" data-category="maternity">
+                    <img src="https://images.unsplash.com/photo-1482575832494-771f74bf6857?auto=format&fit=crop&w=900&q=82" alt="Wedding celebration captured candidly" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="maternity">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=82" alt="Romantic couple portrait" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="maternity">
+                    <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=900&q=82" alt="Bridal details before the ceremony" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--landscape" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=900&q=82" alt="Wedding rituals with family" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=900&q=82" alt="A joyful celebration after the ceremony" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--landscape" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=82" alt="Candid moment from the wedding day" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="product">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=82" alt="Wedding couple in a scenic setting" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--portrait" data-category="product">
+                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=82" alt="A colorful celebration with loved ones" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item--landscape" data-category="product">
+                    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=82" alt="Bride and groom celebrating together" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+            </div>        </div>
     </section>
-
-    <!-- Packages Section -->
-    <section id="packages" class="section-padding packages-section">
-        <div class="container">
-            <div class="text-center">
-                <span class="subtitle-tag">Investment & Services</span>
-                <h2 class="section-heading">Our Wedding Packages</h2>
-                <p style="max-width: 650px; margin: 0 auto 20px;">Transparent and tailored photography & video mixing packages for every celebration style.</p>
-            </div>
-
-            <div class="packages-grid">
-                <!-- Package 1: Silver Classic -->
-                <div class="package-card">
-                    <h3 class="package-name font-serif">Silver Classic</h3>
-                    <p class="package-tagline">1-Day Wedding & Reception</p>
-                    <div class="package-price-box">
-                        <div class="package-price">&#8377;&nbsp; 45,000</div>
-                        <div class="package-price-sub">Ideal for intimate single-day ceremonies</div>
-                    </div>
-                    <ul class="package-features">
-                        <li><i class="fa-solid fa-check"></i> Traditional HD Videography (Full Event)</li>
-                        <li><i class="fa-solid fa-check"></i> Traditional Photography Coverage</li>
-                        <li><i class="fa-solid fa-check"></i> Custom Video Mixing & Cinematic Editing</li>
-                        <li><i class="fa-solid fa-check"></i> 1x Premium Flush Mount Photobook Album</li>
-                        <li><i class="fa-solid fa-check"></i> High-Resolution Edited Digital Photos</li>
-                    </ul>
-                    <a href="https://wa.me/918896467546?text=Hi%2C%20I%20am%20interested%20in%20the%20Silver%20Classic%20Package%20(%E2%82%B945%2C000)." target="_blank" class="btn btn-outline-gold" style="width: 100%;">
-                        Book Silver Package
-                    </a>
-                </div>
-
-                <!-- Package 2: Royal Gold (Popular) -->
-                <div class="package-card popular">
-                    <div class="popular-badge"><i class="fa-solid fa-star"></i> Most Popular</div>
-                    <h3 class="package-name font-serif">Royal Gold</h3>
-                    <p class="package-tagline">2-Days Rituals + Grand Wedding</p>
-                    <div class="package-price-box">
-                        <div class="package-price">&#8377;&nbsp; 85,000</div>
-                        <div class="package-price-sub">Complete Multi-Event Wedding Coverage</div>
-                    </div>
-                    <ul class="package-features">
-                        <li><i class="fa-solid fa-check"></i> <strong>2 Senior Cinematographers & Photographers</strong></li>
-                        <li><i class="fa-solid fa-check"></i> <strong>4K Drone Aerial Videography</strong></li>
-                        <li><i class="fa-solid fa-check"></i> Fine-Art Candid Photography</li>
-                        <li><i class="fa-solid fa-check"></i> Full 4K Color-Graded Video Mixing</li>
-                        <li><i class="fa-solid fa-check"></i> 3-5 Min Cinematic Teaser Trailer</li>
-                        <li><i class="fa-solid fa-check"></i> 2x Royal Velvet Leatherette Photobooks</li>
-                    </ul>
-                    <a href="https://wa.me/918896467546?text=Hi%2C%20I%20am%20interested%20in%20the%20Royal%20Gold%20Package%20(%E2%82%B985%2C000)." target="_blank" class="btn btn-gold" style="width: 100%;">
-                        Book Royal Gold
-                    </a>
-                </div>
-
-                <!-- Package 3: Platinum Luxury -->
-                <div class="package-card">
-                    <h3 class="package-name font-serif">Platinum Luxury</h3>
-                    <p class="package-tagline">3-Days Full Royal Experience</p>
-                    <div class="package-price-box">
-                        <div class="package-price">&#8377;&nbsp; 1,25,000</div>
-                        <div class="package-price-sub">The Ultimate Destination & Palace Experience</div>
-                    </div>
-                    <ul class="package-features">
-                        <li><i class="fa-solid fa-check"></i> <strong>Full Team: Candid, Cinematic, Drone & Live</strong></li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Pre-Wedding Cinematic Outdoor Shoot</strong></li>
-                        <li><i class="fa-solid fa-check"></i> Dual 4K Drone & High-Speed FPV Footage</li>
-                        <li><i class="fa-solid fa-check"></i> Same-Day Edit Teaser Video</li>
-                        <li><i class="fa-solid fa-check"></i> 3x Luxury Customized Photobooks + Box</li>
-                        <li><i class="fa-solid fa-check"></i> Pen Drive in Customized Wooden Case</li>
-                    </ul>
-                    <a href="https://wa.me/918896467546?text=Hi%2C%20I%20am%20interested%20in%20the%20Platinum%20Luxury%20Package%20(%E2%82%B91%2C25%2C000)." target="_blank" class="btn btn-outline-gold" style="width: 100%;">
-                        Book Platinum Package
-                    </a>
-                </div>
-            </div>
-
-            <!-- Date Availability Checker Mini Banner -->
-            <div class="date-checker-mini">
-                <h3 class="font-serif" style="font-size: 1.8rem; color: var(--color-gold); margin-bottom: 10px;">
-                    <i class="fa-solid fa-calendar-check"></i> Check Date Slot Availability
-                </h3>
-                <p style="font-size: 0.95rem; margin-bottom: 20px;">Planning your wedding? Check if our photography team is free on your dates.</p>
-                
-                <div class="date-checker-form" style="display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap;">
-                    <input type="date" id="checkDateInput" class="date-input" aria-label="Select Wedding Date">
-                    <button id="checkDateBtn" class="btn btn-gold" style="min-width: 180px;">Check Date</button>
-                </div>
-
-                <div id="dateStatusResult" style="margin-top: 18px; display: none; padding: 12px; border-radius: 4px; font-size: 0.9rem;"></div>
-            </div>
-        </div>
-    </section>
-
     <section id="instagram" class="section-padding insta-section">
         <div class="container">
             <div class="text-center">
                 <span class="subtitle-tag"><i class="fa-brands fa-instagram" style="color: #E1306C;"></i> Instagram Feed</span>
-                <h2 class="section-heading">@vindhyawasini_mixing_lab</h2>
+                <h2 class="section-heading">@vindhyawasinilab</h2>
                 <p>Follow our daily wedding reels, live behind-the-scenes editing, and couple portraits on Instagram.</p>
             </div>
 
             <div class="insta-grid">
-                <a href="https://www.instagram.com" target="_blank" class="insta-card">
+                <a href="https://www.instagram.com/vindhyawasinilab/" target="_blank" rel="noopener noreferrer" class="insta-card">
                     <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 1" loading="lazy">
                     <div class="insta-card-overlay">
                         <div class="insta-stats"><i class="fa-solid fa-heart"></i> 1.2k <i class="fa-solid fa-comment"></i> 84</div>
                     </div>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" class="insta-card">
+                <a href="https://www.instagram.com/vindhyawasinilab/" target="_blank" rel="noopener noreferrer" class="insta-card">
                     <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 2" loading="lazy">
                     <div class="insta-card-overlay">
                         <div class="insta-stats"><i class="fa-solid fa-heart"></i> 2.4k <i class="fa-solid fa-comment"></i> 142</div>
                     </div>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" class="insta-card">
+                <a href="https://www.instagram.com/vindhyawasinilab/" target="_blank" rel="noopener noreferrer" class="insta-card">
                     <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 3" loading="lazy">
                     <div class="insta-card-overlay">
                         <div class="insta-stats"><i class="fa-solid fa-heart"></i> 950 <i class="fa-solid fa-comment"></i> 53</div>
                     </div>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" class="insta-card">
+                <a href="https://www.instagram.com/vindhyawasinilab/" target="_blank" rel="noopener noreferrer" class="insta-card">
                     <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 4" loading="lazy">
                     <div class="insta-card-overlay">
                         <div class="insta-stats"><i class="fa-solid fa-heart"></i> 3.1k <i class="fa-solid fa-comment"></i> 210</div>
                     </div>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" class="insta-card">
+                <a href="https://www.instagram.com/vindhyawasinilab/" target="_blank" rel="noopener noreferrer" class="insta-card">
                     <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 5" loading="lazy">
                     <div class="insta-card-overlay">
                         <div class="insta-stats"><i class="fa-solid fa-heart"></i> 1.8k <i class="fa-solid fa-comment"></i> 98</div>
                     </div>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" class="insta-card">
+                <a href="https://www.instagram.com/vindhyawasinilab/" target="_blank" rel="noopener noreferrer" class="insta-card">
                     <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 6" loading="lazy">
                     <div class="insta-card-overlay">
                         <div class="insta-stats"><i class="fa-solid fa-heart"></i> 1.5k <i class="fa-solid fa-comment"></i> 76</div>
@@ -505,9 +465,8 @@
                 <div>
                     <h4 class="footer-title">Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="#cinema">YouTube Films</a></li>
                         <li><a href="#gallery">Photo Gallery</a></li>
-                        <li><a href="#packages">Wedding Packages</a></li>
+                        <li><a href="packages.html">Pricing</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
@@ -534,6 +493,34 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Hero photo carousel
+            const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
+            const heroDots = Array.from(document.querySelectorAll('.hero-dot'));
+            const heroPrev = document.getElementById('heroPrev');
+            const heroNext = document.getElementById('heroNext');
+            let activeHeroSlide = 0;
+
+            function showHeroSlide(index) {
+                activeHeroSlide = (index + heroSlides.length) % heroSlides.length;
+                heroSlides.forEach((slide, slideIndex) => {
+                    slide.classList.toggle('is-active', slideIndex === activeHeroSlide);
+                });
+                heroDots.forEach((dot, dotIndex) => {
+                    const isActive = dotIndex === activeHeroSlide;
+                    dot.classList.toggle('is-active', isActive);
+                    dot.setAttribute('aria-pressed', String(isActive));
+                });
+            }
+
+            heroPrev.addEventListener('click', () => showHeroSlide(activeHeroSlide - 1));
+            heroNext.addEventListener('click', () => showHeroSlide(activeHeroSlide + 1));
+            heroDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showHeroSlide(index));
+            });
+
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                window.setInterval(() => showHeroSlide(activeHeroSlide + 1), 6000);
+            }
             // Header Scroll class handler
             const header = document.getElementById('header');
             window.addEventListener('scroll', () => {
@@ -549,19 +536,19 @@
             const navLinks = document.getElementById('navLinks');
             const navBackdrop = document.getElementById('navBackdrop');
 
-            function toggleMobileNav() {
-                navLinks.classList.toggle('active');
-                navBackdrop.classList.toggle('active');
+            function setMobileNavOpen(isOpen) {
+                navLinks.classList.toggle('active', isOpen);
+                navBackdrop.classList.toggle('active', isOpen);
+                mobileToggle.setAttribute('aria-expanded', String(isOpen));
             }
 
-            mobileToggle.addEventListener('click', toggleMobileNav);
-            navBackdrop.addEventListener('click', toggleMobileNav);
-
+            mobileToggle.addEventListener('click', () => {
+                setMobileNavOpen(!navLinks.classList.contains('active'));
+            });
+            document.getElementById('mobileNavClose').addEventListener('click', () => setMobileNavOpen(false));
+            navBackdrop.addEventListener('click', () => setMobileNavOpen(false));
             document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    navBackdrop.classList.remove('active');
-                });
+                link.addEventListener('click', () => setMobileNavOpen(false));
             });
 
             // Gallery Filter Logic
@@ -626,26 +613,7 @@
                 }
             });
 
-            // Date Availability Checker
-            const checkDateBtn = document.getElementById('checkDateBtn');
-            const checkDateInput = document.getElementById('checkDateInput');
-            const dateStatusResult = document.getElementById('dateStatusResult');
-
-            checkDateBtn.addEventListener('click', () => {
-                const selectedDate = checkDateInput.value;
-                if (!selectedDate) {
-                    dateStatusResult.style.display = 'block';
-                    dateStatusResult.style.backgroundColor = 'rgba(217, 107, 67, 0.2)';
-                    dateStatusResult.style.color = '#FF8A65';
-                    dateStatusResult.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Please select a date first.';
-                    return;
-                }
-
-                dateStatusResult.style.display = 'block';
-                dateStatusResult.style.backgroundColor = 'rgba(37, 211, 102, 0.15)';
-                dateStatusResult.style.color = '#25D366';
-                dateStatusResult.innerHTML = `<i class="fa-solid fa-circle-check"></i> Date <strong>${selectedDate}</strong> is currently open! Reserve quickly on WhatsApp to lock slot.`;
-            });
+            
 
             // Enquiry Form Submit
             const enquiryForm = document.getElementById('enquiryForm');
