@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 @source '../index.html';
-
 @layer components {
 :root {
             --color-bg: #FAF8F4; /* Warm ivory page background */
