@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -122,13 +122,14 @@
         </div>
     </section>
     </main>
-    <div class="mobile-quick-bar">
-        <div class="mobile-quick-grid">
-            <a href="tel:+918896467546" class="mobile-quick-btn btn-gold"><i class="fa-solid fa-phone"></i> Call Studio</a>
-            <a href="https://wa.me/918896467546?text=Hello%20Vindhyawasini%20Video%20Mixing%20Lab%2C%20I%20am%20interested%20in%20booking%20wedding%20coverage." target="_blank" rel="noopener" class="mobile-quick-btn" style="background-color: #25D366; color: #FFF;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <div class="mobile-quick-bar" id="mobileQuickBar">
+        <div class="mobile-quick-grid" id="mobileQuickActions" aria-hidden="true" inert>
+            <a href="tel:+918896467546" class="mobile-quick-btn mobile-call-btn" aria-label="Call studio"><i class="fa-solid fa-phone"></i><span>Call Studio</span></a>
+            <a href="https://wa.me/918896467546?text=Hello%20Vindhyawasini%20Video%20Mixing%20Lab%2C%20I%20am%20interested%20in%20booking%20wedding%20coverage." target="_blank" rel="noopener noreferrer" class="mobile-quick-btn mobile-whatsapp-btn" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
         </div>
+        <button class="mobile-fab" id="mobileQuickToggle" type="button" aria-label="Open quick actions" aria-expanded="false" aria-controls="mobileQuickActions"><i class="fa-solid fa-plus"></i></button>
     </div>
-    <footer>
+<footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
@@ -162,6 +163,17 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const quickBar = document.getElementById('mobileQuickBar');
+            const quickToggle = document.getElementById('mobileQuickToggle');
+            const quickActions = document.getElementById('mobileQuickActions');
+            quickToggle.addEventListener('click', () => {
+                const isOpen = quickBar.classList.toggle('is-open');
+                quickToggle.setAttribute('aria-expanded', String(isOpen));
+                quickToggle.setAttribute('aria-label', isOpen ? 'Close quick actions' : 'Open quick actions');
+                quickActions.setAttribute('aria-hidden', String(!isOpen));
+                quickActions.inert = !isOpen;
+            });
+
             const header = document.getElementById('header');
             const mobileToggle = document.getElementById('mobileToggle');
             const navLinks = document.getElementById('navLinks');
