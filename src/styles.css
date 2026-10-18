@@ -1,4 +1,4 @@
-﻿@import 'tailwindcss';
+@import 'tailwindcss';
 @source '../index.html';
 
 @layer components {
@@ -153,14 +153,14 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 22px 0;
+            padding: 8px 0;
             transition: var(--transition-smooth);
         }
 
         header.scrolled {
             background-color: rgba(13, 12, 11, 0.95);
             backdrop-filter: blur(12px);
-            padding: 14px 0;
+            padding: 6px 0;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
@@ -263,7 +263,7 @@
             transform: translate(-50%, -50%) scale(1.05);
             object-fit: cover;
             z-index: 1;
-            filter: brightness(0.4) contrast(1.1);
+            filter: brightness(0.56) contrast(1.05);
         }
 
         .hero-overlay {
@@ -957,8 +957,8 @@
         p { font-weight: 400; font-size: 1rem; line-height: 1.75; }
         .section-heading { line-height: 1.15; }
         .section-padding .container > p { max-width: 720px; margin-left: auto; margin-right: auto; }
-        header.scrolled { background-color: rgba(250, 248, 244, 0.96); box-shadow: 0 8px 24px rgba(49, 39, 20, 0.08); }
-        .hero-overlay { background: radial-gradient(circle, rgba(22, 18, 13, 0.25) 0%, rgba(22, 18, 13, 0.72) 100%); }
+        header.scrolled { background-color: rgba(250, 248, 244, 0.78); box-shadow: 0 8px 24px rgba(49, 39, 20, 0.08); }
+        .hero-overlay { background: radial-gradient(circle, rgba(22, 18, 13, 0.12) 0%, rgba(22, 18, 13, 0.48) 100%); }
         .hero-title { color: #fff; }
         .hero-title span { color: #F2D48A; }
         .hero-badge { color: #F2D48A; }
@@ -968,7 +968,7 @@
         .gallery-item-overlay { background: rgba(32, 27, 20, 0.58); }
         .package-card.popular { background: linear-gradient(180deg, #fff 0%, #f8f3e9 100%); }
         .package-price-box { border-bottom-color: rgba(41,37,31,0.12); }
-        .mobile-quick-bar { background-color: rgba(250, 248, 244, 0.97); }
+        .mobile-quick-bar { background-color: rgba(250, 248, 244, 0.78); }
         footer { background-color: #F0ECE4; }
         .footer-bottom { border-top-color: rgba(41,37,31,0.12); }
         .lightbox { background: rgba(23, 20, 16, 0.94); }
@@ -1027,12 +1027,12 @@
 
         /* Cohesive component polish for the existing single-page design */
         header {
-            background: rgba(250, 248, 244, 0.92);
+            background: rgba(250, 248, 244, 0.58);
             backdrop-filter: blur(14px);
-            box-shadow: 0 4px 24px rgba(49, 39, 20, 0.08);
+            box-shadow: 0 3px 18px rgba(49, 39, 20, 0.06);
         }
         header.scrolled {
-            background-color: rgba(250, 248, 244, 0.97);
+            background-color: rgba(250, 248, 244, 0.78);
             border-bottom-color: rgba(168, 121, 22, 0.16);
         }
         .nav-links { align-items: center; gap: clamp(14px, 2vw, 30px); }
@@ -1098,7 +1098,10 @@
             .nav-links a { font-size: 0.88rem; }
             .mobile-quick-bar { box-shadow: 0 -8px 24px rgba(49, 39, 20, 0.08); }
         }
-        @media (prefers-reduced-motion: reduce) {
+        @media (min-width: 769px) {
+            .nav-container { padding-left: clamp(24px, 3.2vw, 52px); padding-right: clamp(24px, 3.2vw, 52px); }
+            footer > .container { padding-left: clamp(24px, 3.2vw, 52px); padding-right: clamp(24px, 3.2vw, 52px); }
+        }        @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 scroll-behavior: auto !important;
                 animation-duration: 0.01ms !important;
