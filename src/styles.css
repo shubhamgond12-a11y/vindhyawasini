@@ -577,52 +577,13 @@
 
         .insta-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 12px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: start;
+            gap: 20px;
             margin-top: 40px;
         }
-
-        .insta-card {
-            position: relative;
-            height: 240px;
-            border-radius: 4px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .insta-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
-        }
-
-        .insta-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .insta-card-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 15px;
-            opacity: 0;
-            transition: var(--transition-smooth);
-        }
-
-        .insta-card:hover .insta-card-overlay {
-            opacity: 1;
-        }
-
-        .insta-stats {
-            display: flex;
-            gap: 15px;
-            font-size: 0.85rem;
-            color: var(--color-gold);
-        }
+        .insta-embed-card { min-width: 0; overflow: hidden; border: 1px solid rgba(168,121,22,0.14); border-radius: 12px; background: #fff; }
+        .insta-embed-card .instagram-media { min-width: 0 !important; max-width: 100% !important; width: 100% !important; margin: 0 !important; }
 
         /* Lightbox Modal */
         .lightbox {
@@ -680,37 +641,72 @@
         .lightbox-prev { left: 15px; }
         .lightbox-next { right: 15px; }
 
-        /* Mobile Sticky Quick Action Bar */
-        .mobile-quick-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(13, 12, 11, 0.96);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-            z-index: 990;
-            padding: 10px 15px;
-        }
-
+        /* Mobile floating action button */
+        .mobile-quick-bar { display: none; }
         .mobile-quick-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .mobile-quick-btn {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 14px);
             display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(10px) scale(0.96);
+            transform-origin: bottom right;
+            transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+        }
+        .mobile-quick-bar.is-open .mobile-quick-grid {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+        }
+        .mobile-quick-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            min-height: 48px;
+            padding: 0 18px;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.86rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 8px 24px rgba(28, 23, 18, 0.2);
+        }
+        .mobile-call-btn { background: linear-gradient(135deg, #C99B3C, #A87916); }
+        .mobile-whatsapp-btn { background: #25D366; }
+        .mobile-quick-btn i { width: 18px; text-align: center; font-size: 1rem; }
+        .mobile-fab {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            width: 58px;
+            height: 58px;
+            border: 0;
+            border-radius: 50%;
+            color: #fff;
+            background: linear-gradient(135deg, #C99B3C, #A87916);
+            box-shadow: 0 10px 28px rgba(49, 39, 20, 0.25);
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: transform 180ms ease, box-shadow 180ms ease;
+        }
+        .mobile-fab:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(49,39,20,0.3); }
+        .mobile-fab i { transition: transform 180ms ease; }
+        .mobile-quick-bar.is-open .mobile-fab i { transform: rotate(45deg); }
+        @media (max-width: 768px) {
+            .mobile-quick-bar {
+                display: block;
+                position: fixed;
+                z-index: 990;
+                right: 20px;
+                bottom: calc(20px + env(safe-area-inset-bottom));
+            }
         }
 
         /* Footer */
@@ -766,7 +762,7 @@
             .packages-grid { grid-template-columns: 1fr; gap: 40px; }
             .package-card.popular { transform: none; }
             .gallery-masonry { column-count: 3; }
-            .insta-grid { grid-template-columns: repeat(3, 1fr); }
+            .insta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-wrapper { grid-template-columns: 1fr !important; }
         }
@@ -810,8 +806,7 @@
             .gallery-filter-bar { gap: 8px; }
             .filter-btn { font-size: 0.72rem; padding: 8px 14px; }
 
-            .insta-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-            .insta-card { height: 180px; }
+            .insta-grid { grid-template-columns: 1fr; gap: 16px; }
 
             .footer-grid { grid-template-columns: 1fr; gap: 30px; }
             .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
@@ -836,7 +831,6 @@
         .gallery-item-overlay { background: rgba(32, 27, 20, 0.58); }
         .package-card.popular { background: linear-gradient(180deg, #fff 0%, #f8f3e9 100%); }
         .package-price-box { border-bottom-color: rgba(41,37,31,0.12); }
-        .mobile-quick-bar { background-color: rgba(250, 248, 244, 0.78); }
         footer { background-color: #F0ECE4; }
         .footer-bottom { border-top-color: rgba(41,37,31,0.12); }
         .lightbox { background: rgba(23, 20, 16, 0.94); }
@@ -972,7 +966,7 @@
         }
         .package-card { padding: clamp(26px, 4vw, 40px); }
         .package-card.popular { background: linear-gradient(180deg, #fff 0%, #fbf6eb 100%); }
-        .gallery-item, .insta-card { border-radius: 12px; }
+        .gallery-item { border-radius: 12px; }
         .gallery-item, .package-card, .date-checker-mini {
             border-color: rgba(168, 121, 22, 0.18);
         }
@@ -1006,7 +1000,6 @@
                 border-left-color: rgba(168, 121, 22, 0.18);
             }
             .nav-links a { font-size: 0.88rem; }
-            .mobile-quick-bar { box-shadow: 0 -8px 24px rgba(49, 39, 20, 0.08); }
         }
         @media (min-width: 769px) {
             .nav-container { padding-left: clamp(24px, 3.2vw, 52px); padding-right: clamp(24px, 3.2vw, 52px); }
@@ -1021,4 +1014,8 @@
             }
         }
 }
+
+
+        .studio-map-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(168,121,22,0.45); text-underline-offset: 3px; }
+        .studio-map-link:hover { color: var(--color-gold-hover); text-decoration-color: currentColor; }
 
