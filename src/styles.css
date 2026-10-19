@@ -423,8 +423,8 @@
 
         .packages-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
             margin-top: 50px;
             align-items: stretch;
         }
@@ -495,6 +495,8 @@
             line-height: 1;
             font-weight: 600;
         }
+
+        .package-price-custom { font-size: clamp(1.8rem, 2vw, 2.4rem); }
 
         .package-price-sub {
             font-size: 0.8rem;
@@ -759,7 +761,7 @@
 
         /* Responsive Breakpoints & Mobile Optimization */
         @media (max-width: 1024px) {
-            .packages-grid { grid-template-columns: 1fr; gap: 40px; }
+            .packages-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
             .package-card.popular { transform: none; }
             .gallery-masonry { column-count: 3; }
             .insta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -769,6 +771,8 @@
 
         @media (max-width: 768px) {
             .section-padding { padding: 60px 0; }
+            #packages.packages-section { padding-top: 112px; }
+            .packages-grid { grid-template-columns: 1fr; gap: 24px; }
             .mobile-toggle { display: block; }
             .mobile-quick-bar { display: block; }
 
