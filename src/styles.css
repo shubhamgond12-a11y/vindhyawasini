@@ -386,6 +386,46 @@
         .service-card p { margin-bottom: 18px; font-size: 0.93rem; line-height: 1.7; }
         .service-card a { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--color-gold-hover); font-size: 0.82rem; font-weight: 700; }
         .service-card a:hover { color: var(--color-text-light); gap: 12px; }
+
+        /* Photo framing order page */
+        .framing-section { padding-top: 112px; background: var(--color-surface); min-height: 70vh; }
+        .framing-intro { max-width: 800px; margin: 0 auto 42px; }
+        .framing-intro .section-heading { margin-bottom: 12px; }
+        .framing-intro p { max-width: 700px; margin: 0 auto; }
+        .framing-order-layout { display: grid; grid-template-columns: minmax(270px, 0.85fr) minmax(0, 1.4fr); gap: 26px; align-items: start; }
+        .framing-info-card, .framing-order-card { padding: clamp(22px, 3.5vw, 38px); border: 1px solid rgba(168,121,22,0.17); border-radius: 18px; background: #fff; box-shadow: 0 14px 38px rgba(49,39,20,0.06); }
+        .framing-info-card { position: sticky; top: 100px; }
+        .framing-info-card .service-icon { margin-bottom: 20px; }
+        .framing-info-card h2, .framing-order-card h2 { margin-bottom: 8px; color: var(--color-text-light); font-size: clamp(1.65rem, 2.5vw, 2.2rem); }
+        .framing-info-card > p, .framing-form-note { margin-bottom: 22px; font-size: 0.92rem; }
+        .framing-points { display: grid; gap: 14px; list-style: none; }
+        .framing-points li { display: flex; align-items: flex-start; gap: 11px; color: var(--color-text-muted); font-size: 0.9rem; }
+        .framing-points i { margin-top: 5px; color: var(--color-gold); }
+        .framing-address { display: grid; gap: 6px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(41,37,31,0.1); font-size: 0.86rem; }
+        .framing-address a { color: var(--color-gold-hover); text-decoration: underline; text-underline-offset: 3px; }
+        .framing-form-note { color: var(--color-text-muted); }
+        .framing-order-card form { display: grid; gap: 17px; }
+        .framing-field { display: grid; gap: 7px; color: var(--color-text-light); font-size: 0.88rem; font-weight: 600; }
+        .framing-field .select-input { width: 100%; }
+        .framing-field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+        .framing-delivery-options { display: flex; flex-wrap: wrap; gap: 10px; border: 0; }
+        .framing-delivery-options legend { width: 100%; margin-bottom: 8px; color: var(--color-text-light); font-size: 0.88rem; font-weight: 600; }
+        .framing-delivery-options label { cursor: pointer; }
+        .framing-delivery-options input { position: absolute; opacity: 0; pointer-events: none; }
+        .framing-delivery-options label span { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px; border: 1px solid rgba(98,93,85,0.22); border-radius: 999px; color: var(--color-text-muted); font-size: 0.82rem; }
+        .framing-delivery-options input:checked + span { border-color: var(--color-gold); background: #fbf6eb; color: var(--color-gold-hover); }
+        .framing-delivery-options input:focus-visible + span { outline: 3px solid rgba(168,121,22,0.55); outline-offset: 2px; }
+        .framing-upload-field input[type="file"] { width: 100%; padding: 12px; border: 1px dashed rgba(168,121,22,0.42); border-radius: 10px; background: #fffdf8; font-size: 0.82rem; }
+        .framing-upload-field small { color: var(--color-text-muted); font-size: 0.76rem; font-weight: 400; line-height: 1.5; }
+        .frame-photo-preview { display: flex; align-items: center; gap: 14px; padding: 12px; border: 1px solid rgba(168,121,22,0.15); border-radius: 12px; background: #fffdf8; }
+        .frame-photo-preview img { width: 88px; height: 88px; flex: 0 0 88px; object-fit: cover; border-radius: 8px; }
+        .frame-photo-preview span { overflow-wrap: anywhere; color: var(--color-text-muted); font-size: 0.82rem; }
+        .frame-quote-note { display: flex; align-items: flex-start; gap: 9px; padding: 13px; border-radius: 10px; background: #fbf6eb; color: #62553b; font-size: 0.82rem; line-height: 1.55; }
+        .frame-quote-note i { margin-top: 3px; color: var(--color-gold-hover); }
+        .framing-submit { width: 100%; }
+        .frame-upload-reminder { margin: -6px 0 0; font-size: 0.78rem; text-align: center; }
+        @media (max-width: 900px) { .framing-order-layout { grid-template-columns: 1fr; } .framing-info-card { position: static; } }
+        @media (max-width: 600px) { .framing-section { padding-top: 100px; } .framing-field-grid { grid-template-columns: 1fr; } .framing-delivery-options { flex-direction: column; align-items: flex-start; } }
         /* Interactive Filterable Gallery Grid */
         .gallery-filter-bar {
             display: flex;
