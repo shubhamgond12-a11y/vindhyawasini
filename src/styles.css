@@ -1061,3 +1061,34 @@
         .studio-map-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(168,121,22,0.45); text-underline-offset: 3px; }
         .studio-map-link:hover { color: var(--color-gold-hover); text-decoration-color: currentColor; }
 
+        /* Full-bleed portfolio wall, like the reference gallery. */
+        #gallery .gallery-masonry {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            column-count: 5;
+            column-gap: 10px;
+        }
+        #gallery .gallery-item { margin-bottom: 10px; border: 0; border-radius: 0; }
+        /* Vary the crop heights so the landscape and portrait frames break up naturally. */
+        #gallery .gallery-item:nth-child(5n + 1) { aspect-ratio: 3 / 2; }
+        #gallery .gallery-item:nth-child(5n + 2) { aspect-ratio: 2 / 3; }
+        #gallery .gallery-item:nth-child(5n + 3) { aspect-ratio: 1 / 1; }
+        #gallery .gallery-item:nth-child(5n + 4) { aspect-ratio: 4 / 5; }
+        #gallery .gallery-item:nth-child(5n) { aspect-ratio: 4 / 3; }
+        #gallery .gallery-item img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 1024px) {
+            #gallery .gallery-masonry { column-count: 3; }
+        }
+        @media (max-width: 768px) {
+            #gallery .gallery-masonry { column-count: 2; column-gap: 8px; }
+            #gallery .gallery-item { margin-bottom: 8px; }
+        }
+
