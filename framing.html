@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Photo Framing in Sultanpur | Vindhyawasini Studio</title>
+    <meta name="description" content="Choose your preferred frame size, quality and border style. Request custom photo framing from Vindhyawasini Studio in Sultanpur with studio pickup or local home delivery.">
+    <link rel="canonical" href="https://vindhyawasinimixinglab.com/framing.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div class="mobile-nav-backdrop" id="navBackdrop"></div>
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Vindhyawasini<span>Video Mixing Lab</span></a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li class="nav-close-row"><button type="button" class="nav-close-btn" id="mobileNavClose" aria-label="Close navigation"><i class="fa-solid fa-xmark"></i><span>Close</span></button></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#gallery">Photo Gallery</a></li>
+                    <li><a href="packages.html">Pricing</a></li>
+                    <li><a href="index.html#instagram">Instagram Feed</a></li>
+                    <li><a href="index.html#contact">Book Dates</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding framing-section">
+            <div class="container">
+                <div class="framing-intro text-center">
+                    <span class="subtitle-tag">Custom Photo Framing</span>
+                    <h1 class="section-heading">Frame the Moments You Love</h1>
+                    <p>Choose your preferred frame details and send us your request. We’ll confirm availability, the final price, and delivery charge with you before payment.</p>
+                </div>
+
+                <div class="framing-order-layout">
+                    <aside class="framing-info-card">
+                        <span class="service-icon"><i class="fa-regular fa-image" aria-hidden="true"></i></span>
+                        <h2>Made for Your Photo</h2>
+                        <p>Tell us how you would like your photo framed. Our studio will confirm the details and total with you on WhatsApp.</p>
+                        <ul class="framing-points">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Choose a frame size, quality and border style</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Collect your finished frame from our Sultanpur studio</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Request home delivery within Sultanpur; delivery charges are confirmed before payment</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Pay by UPI after the studio confirms your order total</span></li>
+                        </ul>
+                        <div class="framing-address">
+                            <strong>Studio pickup</strong>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Vindhyawasini+Video+Mixing+Lab%2C+Shop+No.+1%2C+K.K+Complex%2C+near+Over+Bridge%2C+Civil+Line%2C+Sultanpur%2C+Uttar+Pradesh+228001" target="_blank" rel="noopener noreferrer">Shop No. 1, K.K Complex, near Over Bridge, Civil Line, Sultanpur, Uttar Pradesh 228001 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </aside>
+
+                    <section class="framing-order-card" aria-labelledby="frameOrderHeading">
+                        <h2 id="frameOrderHeading">Configure Your Frame</h2>
+                        <p class="framing-form-note">These are preferences for your request. We’ll confirm available options and pricing with you.</p>
+                        <form id="framingOrderForm">
+                            <label class="framing-field">
+                                <span>Your name</span>
+                                <input type="text" id="frameCustomerName" class="select-input" autocomplete="name" required>
+                            </label>
+
+                            <div class="framing-field-grid">
+                                <label class="framing-field">
+                                    <span>Preferred frame size</span>
+                                    <select id="frameSize" class="select-input" required>
+                                        <option value="" selected disabled>Choose a size</option>
+                                        <option>8 × 10 in</option>
+                                        <option>12 × 16 in</option>
+                                        <option>16 × 20 in</option>
+                                        <option>Custom size (add in notes)</option>
+                                    </select>
+                                </label>
+                                <label class="framing-field">
+                                    <span>Framing quality</span>
+                                    <select id="frameQuality" class="select-input" required>
+                                        <option value="" selected disabled>Choose a quality</option>
+                                        <option>Standard</option>
+                                        <option>Premium</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <label class="framing-field">
+                                <span>Preferred border style</span>
+                                <select id="frameBorder" class="select-input" required>
+                                    <option value="" selected disabled>Choose a border style</option>
+                                    <option>No border</option>
+                                    <option>Classic</option>
+                                    <option>Decorative</option>
+                                    <option>Custom (add in notes)</option>
+                                </select>
+                            </label>
+
+                            <fieldset class="framing-delivery-options">
+                                <legend>How would you like to receive it?</legend>
+                                <label><input type="radio" name="frameDelivery" value="Studio pickup" checked> <span><i class="fa-solid fa-shop" aria-hidden="true"></i> Studio pickup</span></label>
+                                <label><input type="radio" name="frameDelivery" value="Home delivery in Sultanpur"> <span><i class="fa-solid fa-house" aria-hidden="true"></i> Home delivery in Sultanpur</span></label>
+                            </fieldset>
+
+                            <label class="framing-field framing-address-field" id="frameDeliveryAddressField" hidden>
+                                <span>Delivery address in Sultanpur</span>
+                                <textarea id="frameDeliveryAddress" class="select-input" rows="3" autocomplete="street-address" placeholder="House / street, area, Sultanpur"></textarea>
+                            </label>
+
+                            <label class="framing-field framing-upload-field">
+                                <span>Choose the photo to frame</span>
+                                <input type="file" id="framePhoto" accept="image/jpeg,image/png,image/webp" required>
+                                <small>JPG, PNG or WebP. The photo is previewed in your browser; it is not uploaded to this website.</small>
+                            </label>
+                            <div class="frame-photo-preview" id="framePhotoPreview" hidden>
+                                <img id="framePhotoPreviewImage" alt="Preview of the photo selected for framing">
+                                <span id="framePhotoName"></span>
+                            </div>
+
+                            <label class="framing-field">
+                                <span>Notes (optional)</span>
+                                <textarea id="frameNotes" class="select-input" rows="3" placeholder="Custom size, preferred finish, or anything else we should know"></textarea>
+                            </label>
+
+                            <div class="frame-quote-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> We’ll confirm your frame price and any delivery charge on WhatsApp. You can pay by UPI after you approve the total.</div>
+                            <button type="submit" class="btn btn-gold framing-submit"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Send Frame Request on WhatsApp</button>
+                            <p class="frame-upload-reminder" id="frameUploadReminder" aria-live="polite">When WhatsApp opens, attach the selected photo in the chat to complete your request.</p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div><a href="index.html" class="logo" style="color: var(--color-text-light);">Vindhyawasini<span style="color: var(--color-gold);">Video Mixing Lab</span></a><p style="margin-top: 15px; max-width: 320px;">Custom photo framing and wedding photography in Sultanpur, Uttar Pradesh.</p></div>
+                <div><h4 class="footer-title">Navigation</h4><ul class="footer-links"><li><a href="index.html#services">Services</a></li><li><a href="index.html#gallery">Photo Gallery</a></li><li><a href="packages.html">Pricing</a></li><li><a href="index.html#contact">Contact Us</a></li></ul></div>
+                <div><h4 class="footer-title">Framing</h4><ul class="footer-links"><li><a href="#frameOrderHeading">Configure a Frame</a></li><li><a href="https://www.google.com/maps/search/?api=1&amp;query=Vindhyawasini+Video+Mixing+Lab%2C+Shop+No.+1%2C+K.K+Complex%2C+near+Over+Bridge%2C+Civil+Line%2C+Sultanpur%2C+Uttar+Pradesh+228001" target="_blank" rel="noopener noreferrer">Studio Location</a></li><li><a href="tel:+918896467546">Call the Studio</a></li></ul></div>
+                <div><h4 class="footer-title">Studio Hours</h4><p style="font-size: 0.9rem;">Monday – Sunday<br>09:00 AM – 09:00 PM IST</p></div>
+            </div>
+            <div class="footer-bottom"><div>&copy; 2026 Vindhyawasini Video Mixing Lab. All Rights Reserved.</div></div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('header');
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            const navBackdrop = document.getElementById('navBackdrop');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+
+            window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 50));
+            function closeMobileNav() {
+                navLinks.classList.remove('active');
+                navBackdrop.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+            mobileToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('active');
+                navBackdrop.classList.toggle('active', isOpen);
+                mobileToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+            mobileNavClose.addEventListener('click', closeMobileNav);
+            navBackdrop.addEventListener('click', closeMobileNav);
+            navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileNav));
+
+            const deliveryAddressField = document.getElementById('frameDeliveryAddressField');
+            const deliveryAddress = document.getElementById('frameDeliveryAddress');
+            document.querySelectorAll('input[name="frameDelivery"]').forEach(option => {
+                option.addEventListener('change', () => {
+                    const homeDelivery = option.checked && option.value === 'Home delivery in Sultanpur';
+                    if (homeDelivery) {
+                        deliveryAddressField.hidden = false;
+                        deliveryAddress.required = true;
+                    } else if (option.checked) {
+                        deliveryAddressField.hidden = true;
+                        deliveryAddress.required = false;
+                        deliveryAddress.value = '';
+                    }
+                });
+            });
+
+            const photoInput = document.getElementById('framePhoto');
+            const photoPreview = document.getElementById('framePhotoPreview');
+            const photoPreviewImage = document.getElementById('framePhotoPreviewImage');
+            const photoName = document.getElementById('framePhotoName');
+            let previewUrl = null;
+            photoInput.addEventListener('change', () => {
+                if (previewUrl) URL.revokeObjectURL(previewUrl);
+                const file = photoInput.files[0];
+                if (!file) {
+                    photoPreview.hidden = true;
+                    return;
+                }
+                previewUrl = URL.createObjectURL(file);
+                photoPreviewImage.src = previewUrl;
+                photoName.textContent = file.name;
+                photoPreview.hidden = false;
+            });
+
+            document.getElementById('framingOrderForm').addEventListener('submit', event => {
+                event.preventDefault();
+                const file = photoInput.files[0];
+                const delivery = document.querySelector('input[name="frameDelivery"]:checked').value;
+                const details = [
+                    'Hello Vindhyawasini Studio, I would like a custom photo frame.',
+                    '',
+                    `Name: ${document.getElementById('frameCustomerName').value.trim()}`,
+                    `Preferred size: ${document.getElementById('frameSize').value}`,
+                    `Framing quality: ${document.getElementById('frameQuality').value}`,
+                    `Border style: ${document.getElementById('frameBorder').value}`,
+                    `Collection: ${delivery}`,
+                    delivery === 'Home delivery in Sultanpur' ? `Delivery address: ${deliveryAddress.value.trim()}` : '',
+                    `Photo file to attach: ${file.name}`,
+                    `Notes: ${document.getElementById('frameNotes').value.trim() || 'None'}`,
+                    '',
+                    'Please confirm availability, total price, and payment details. I will attach the photo in this chat.'
+                ].filter(Boolean).join('\n');
+                window.open(`https://wa.me/918896467546?text=${encodeURIComponent(details)}`, '_blank', 'noopener,noreferrer');
+            });
+        });
+    </script>
+</body>
+</html>
