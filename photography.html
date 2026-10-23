@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Browse wedding, bridal, ceremony, pre-wedding, maternity and baby photography by vindhaywasini Studio in Sultanpur.">
+<title>Photography Gallery | vindhaywasini Studio Sultanpur</title><link rel="canonical" href="https://vindhaywasinistudio.in/photography.html">
+<link rel="icon" type="image/svg+xml" href="./assets/css/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="./assets/css/styles.css"></head>
+<body class="photography-page"><header><div class="container nav-container"><a href="index.html" class="logo">vindhaywasini<span>Video Mixing Lab</span></a><nav aria-label="Main navigation"><ul class="nav-links"><li><a href="index.html#services">Services</a></li><li><a href="index.html#gallery">Portfolio</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav><a href="index.html" class="btn btn-outline-gold">Home</a></div></header>
+<main id="photography-gallery" class="section-padding"><div class="container"><div class="text-center photography-intro"><span class="subtitle-tag">Photo Collections</span><h1 class="section-heading">Photography Gallery</h1><p>Browse the complete collection by photo category.</p></div>
+<div class="gallery-filter-bar" role="group" aria-label="Filter photos by category">
+<button class="filter-btn active" data-filter="all" aria-pressed="true">All Photos</button>
+<button class="filter-btn" data-filter="bridal" aria-pressed="false">Bridal Portraits</button>
+<button class="filter-btn" data-filter="ceremony" aria-pressed="false">Pheras &amp; Rituals</button>
+<button class="filter-btn" data-filter="prewedding" aria-pressed="false">Pre-Wedding</button>
+<button class="filter-btn" data-filter="haldi" aria-pressed="false">Haldi &amp; Mehendi</button>
+<button class="filter-btn" data-filter="engagement" aria-pressed="false">Engagement</button>
+<button class="filter-btn" data-filter="maternity" aria-pressed="false">Maternity</button>
+<button class="filter-btn" data-filter="baby" aria-pressed="false">Baby</button>
+<button class="filter-btn" data-filter="product" aria-pressed="false">Product</button>
+</div>
+<div class="gallery-masonry" id="photographyGrid">
+<div class="gallery-item gallery-item--landscape" data-category="bridal">
+                    <img src="photos/bridal-01.webp" alt="Bridal portrait with traditional wedding details" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-02.webp" alt="Bride in her wedding attire" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-03.webp" alt="Bridal portrait" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        <span>View Photo</span>
+                    </div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-04.webp" alt="Bride in traditional wedding attire" loading="lazy">
+                    <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-05.webp" alt="Bridal portrait from the studio collection" loading="lazy">
+                    <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-06.webp" alt="Bride ready for her wedding ceremony" loading="lazy">
+                    <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-07.webp" alt="Traditional bridal portrait" loading="lazy">
+                    <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-08.webp" alt="Bride wearing wedding jewelry" loading="lazy">
+                    <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                </div>
+<div class="gallery-item gallery-item--portrait" data-category="bridal">
+                    <img src="photos/bridal-09.webp" alt="Bridal portrait from a wedding photoshoot" loading="lazy">
+                    <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                </div>
+    </div></div><p class="photography-empty" id="photographyEmpty" hidden>No photos have been added to this category yet.</p></div></main>
+<div class="lightbox" id="photoLightbox" aria-modal="true" role="dialog" aria-label="Photo viewer"><button class="lightbox-close" id="photoClose" type="button" aria-label="Close photo viewer">&times;</button><button class="lightbox-nav lightbox-prev" id="photoPrev" type="button" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button><img src="" class="lightbox-img" id="photoLightboxImg" alt=""><button class="lightbox-nav lightbox-next" id="photoNext" type="button" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button></div>
+<script>
+const items=[...document.querySelectorAll('#photographyGrid .gallery-item')],buttons=[...document.querySelectorAll('.gallery-filter-bar .filter-btn')],empty=document.getElementById('photographyEmpty');
+buttons.forEach(button=>button.addEventListener('click',()=>{const category=button.dataset.filter;buttons.forEach(item=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});items.forEach(item=>{item.hidden=category!=='all'&&item.dataset.category!==category;});empty.hidden=category==='all'||items.some(item=>!item.hidden);}));
+const lightbox=document.getElementById('photoLightbox'),lightboxImg=document.getElementById('photoLightboxImg');let visible=[],current=0;
+function refreshVisible(){visible=items.filter(item=>!item.hidden).map(item=>item.querySelector('img'));}function show(index){if(!visible.length)return;current=(index+visible.length)%visible.length;lightboxImg.src=visible[current].src;lightboxImg.alt=visible[current].alt;}
+items.forEach(item=>item.addEventListener('click',()=>{refreshVisible();current=visible.indexOf(item.querySelector('img'));show(current);lightbox.classList.add('active');}));
+document.getElementById('photoClose').addEventListener('click',()=>lightbox.classList.remove('active'));document.getElementById('photoNext').addEventListener('click',()=>show(current+1));document.getElementById('photoPrev').addEventListener('click',()=>show(current-1));lightbox.addEventListener('click',event=>{if(event.target===lightbox)lightbox.classList.remove('active');});
+document.addEventListener('keydown',event=>{if(!lightbox.classList.contains('active'))return;if(event.key==='Escape')lightbox.classList.remove('active');if(event.key==='ArrowRight')show(current+1);if(event.key==='ArrowLeft')show(current-1);});
+</script></body></html>
