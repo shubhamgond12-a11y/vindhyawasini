@@ -489,8 +489,8 @@
             border: 1px solid rgba(255,255,255,0.05);
         }
 
-        .gallery-item--landscape img { aspect-ratio: 4 / 3; object-fit: cover; }
-        .gallery-item--portrait img { aspect-ratio: 3 / 4; object-fit: cover; }
+        .gallery-item--landscape img { aspect-ratio: 4 / 3; object-fit: contain; }
+        .gallery-item--portrait img { aspect-ratio: 3 / 4; object-fit: contain; }
 
         .gallery-item img {
             width: 100%;
@@ -498,9 +498,7 @@
             transition: var(--transition-smooth);
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.06);
-        }
+        .gallery-item:hover img { transform: none; }
 
         .gallery-item-overlay {
             position: absolute;
@@ -1050,6 +1048,14 @@
             transform: scale(1.04);
             transition: opacity 900ms ease, transform 6s ease;
         }
+        .hero-slide > img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            object-fit: cover;
+        }
         .hero-slide.is-active { opacity: 1; transform: scale(1); }
         .hero-overlay { background: radial-gradient(circle, rgba(22,18,13,0.18) 0%, rgba(22,18,13,0.58) 100%); }
         .hero-carousel-controls {
@@ -1186,7 +1192,7 @@
             column-gap: 10px;
         }
         #gallery .gallery-item { margin-bottom: 10px; border: 0; border-radius: 0; }
-        /* Vary the crop heights so the landscape and portrait frames break up naturally. */
+        /* Use varied portfolio frames while keeping each complete photo visible. */
         #gallery .gallery-item:nth-child(5n + 1) { aspect-ratio: 3 / 2; }
         #gallery .gallery-item:nth-child(5n + 2) { aspect-ratio: 2 / 3; }
         #gallery .gallery-item:nth-child(5n + 3) { aspect-ratio: 1 / 1; }
@@ -1197,13 +1203,42 @@
             inset: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            background: #f8f5ef;
         }
+        .gallery-browse-wrap { margin-top: 32px; }
+        .photography-intro { margin: 0 auto 32px; padding-top: 30px; }
+        #photography-gallery .gallery-masonry {
+            width: 100%;
+            position: static;
+            left: auto;
+            transform: none;
+            column-count: 4;
+            column-gap: 18px;
+        }
+        #photography-gallery .gallery-item {
+            aspect-ratio: auto !important;
+            margin-bottom: 18px;
+            border: 1px solid rgba(168,121,22,0.14);
+            border-radius: 10px;
+            background: #f8f5ef;
+        }
+        #photography-gallery .gallery-item img {
+            position: static;
+            width: 100%;
+            height: auto;
+            aspect-ratio: auto;
+            object-fit: contain;
+            background: #f8f5ef;
+        }
+        #photography-gallery .gallery-item[hidden] { display: none; }
         @media (max-width: 1024px) {
             #gallery .gallery-masonry { column-count: 3; }
+            #photography-gallery .gallery-masonry { column-count: 3; }
         }
         @media (max-width: 768px) {
             #gallery .gallery-masonry { column-count: 2; column-gap: 8px; }
+            #photography-gallery .gallery-masonry { column-count: 2; column-gap: 10px; }
             #gallery .gallery-item { margin-bottom: 8px; }
         }
 
