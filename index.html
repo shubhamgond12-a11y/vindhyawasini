@@ -32,57 +32,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Schema.org Structured Data for Local Business SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "PhotographyBusiness",
-  "name": "vindhaywasini Video Mixing Lab",
-  "alternateName": "vindhaywasini Studio Sultanpur",
-  "image": [
-    "https://www.vindhaywasinistudio.in/photos/hero-01.webp",
-    "https://www.vindhaywasinistudio.in/photos/bridal-01.webp"
-  ],
-  "@id": "https://vindhaywasinistudio.in/",
-  "url": "https://vindhaywasinistudio.in/",
-  "telephone": "+918896467546",
-  "priceRange": "\u20B9\u20B9 - \u20B9\u20B9\u20B9",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Shop No. 1, K.K Complex, near Over Bridge, Civil Line",
-    "addressLocality": "Sultanpur",
-    "addressRegion": "Uttar Pradesh",
-    "postalCode": "228001",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 26.2648,
-    "longitude": 82.0727
-  },
-  "openingHoursSpecification": [
+    <script type="application/ld+json">
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
+      "@context": "https://schema.org",
+      "@type": "PhotographyBusiness",
+      "name": "vindhaywasini Video Mixing Lab",
+      "alternateName": "vindhaywasini Studio Sultanpur",
+      "image": [
+        "https://www.vindhaywasinistudio.in/photos/hero-01.webp",
+        "https://www.vindhaywasinistudio.in/photos/bridal-01.webp"
       ],
-      "opens": "09:00",
-      "closes": "21:00"
+      "@id": "https://vindhaywasinistudio.in/",
+      "url": "https://vindhaywasinistudio.in/",
+      "telephone": "+918896467546",
+      "priceRange": "\u20B9\u20B9 - \u20B9\u20B9\u20B9",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 1, K.K Complex, near Over Bridge, Civil Line",
+        "addressLocality": "Sultanpur",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "228001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.2648,
+        "longitude": 82.0727
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@vindhaywasinimixinglab",
+        "https://www.instagram.com/vindhaywasinilab/",
+        "https://www.justdial.com/Sultanpur/Vindhaywasini-Video-Mixing-Lab-Near-Over-Bridge-Civil-Line/9999P5362-5362-210528122513-E3E3_BZDET"
+      ]
     }
-  ],
-  "sameAs": [
-    "https://www.youtube.com/@vindhaywasinimixinglab",
-    "https://www.instagram.com/vindhaywasinilab/",
-    "https://www.justdial.com/Sultanpur/Vindhaywasini-Video-Mixing-Lab-Near-Over-Bridge-Civil-Line/9999P5362-5362-210528122513-E3E3_BZDET"
-  ]
-}
-</script>
-    
+    </script>
+
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
@@ -275,19 +265,19 @@
                 </div>
 
                 <div style="background-color: var(--color-card-bg); padding: clamp(25px, 5vw, 45px); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 6px;">
-                    <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 20px; color: var(--color-gold);">Send Direct Booking Inquiry</h3>
-                    <form id="enquiryForm">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-                            <input type="text" id="name" placeholder="Your Name *" class="select-input" required>
-                            <input type="tel" id="phone" placeholder="Phone Number *" class="select-input" required>
+                    <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 20px; color: var(--color-gold);">Book on WhatsApp</h3>
+                    <div id="enquiryForm">
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" id="name" placeholder="Your Name *" aria-label="Your name" autocomplete="name" class="select-input" required>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-                            <input type="date" id="weddingDate" class="select-input" required>
-                            <input type="text" id="venue" placeholder="Venue / City *" class="select-input" required>
+                            <input type="date" id="weddingDate" aria-label="Wedding date" class="select-input" required>
+                            <input type="text" id="venue" placeholder="Venue / City *" aria-label="Venue or city" autocomplete="address-level2" class="select-input" required>
                         </div>
-                        <textarea id="message" rows="4" placeholder="Tell us about your wedding visions and events..." class="select-input" style="margin-bottom: 20px;"></textarea>
-                        <button type="submit" class="btn btn-gold" style="width: 100%;">Submit & Send WhatsApp Inquiry</button>
-                    </form>
+                        <textarea id="message" rows="4" placeholder="Tell us about your wedding visions and events..." aria-label="Additional booking details" class="select-input" style="margin-bottom: 12px;"></textarea>
+                        <p style="font-size: 0.9rem; margin: 0 0 18px; color: var(--color-text-muted);">By submitting this form, you will be redirected to WhatsApp to chat directly with Vindhaywasini Studio.</p>
+                        <button type="button" id="whatsappBookingButton" class="btn btn-gold" style="width: 100%;"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp to Book</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -484,19 +474,24 @@
 
             
 
-            // Enquiry Form Submit
-            const enquiryForm = document.getElementById('enquiryForm');
-            enquiryForm.addEventListener('submit', (e) => {
-                e.preventDefault();
+            // Open the booking inquiry directly in WhatsApp after validating the requested details.
+            document.getElementById('whatsappBookingButton').addEventListener('click', () => {
+                const requiredBookingFields = ['name', 'weddingDate', 'venue'].map(id => document.getElementById(id));
+                const invalidField = requiredBookingFields.find(field => !field.value.trim());
+                if (invalidField) {
+                    invalidField.setCustomValidity('Please complete this field.');
+                    invalidField.reportValidity();
+                    invalidField.addEventListener('input', () => invalidField.setCustomValidity(''), { once: true });
+                    return;
+                }
                 const name = document.getElementById('name').value;
-                const phone = document.getElementById('phone').value;
                 const date = document.getElementById('weddingDate').value;
                 const venue = document.getElementById('venue').value;
                 const message = document.getElementById('message').value;
 
-                const text = `Hello vindhaywasini Video Mixing Lab,%0A%0A*New Booking Inquiry*%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Wedding Date:* ${encodeURIComponent(date)}%0A*Venue:* ${encodeURIComponent(venue)}%0A*Note:* ${encodeURIComponent(message)}`;
+                const text = `Hello vindhaywasini Video Mixing Lab,\n\n*New Booking Inquiry*\n*Name:* ${name}\n*Wedding Date:* ${date}\n*Venue:* ${venue}\n*Note:* ${message}`;
 
-                window.open(`https://wa.me/918896467546?text=${text}`, '_blank');
+                window.open(`https://wa.me/918896467546?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
             });
         });
     </script>
