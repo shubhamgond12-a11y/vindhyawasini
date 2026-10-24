@@ -191,7 +191,7 @@
   <div class="text-center">
     <span class="subtitle-tag">Visual Portfolio</span>
     <h2 class="section-heading">A Few Moments We Love</h2>
-    <p style="max-width:600px;margin:0 auto 30px;">A few bridal portraits from our studio collection. Browse the gallery for available photographs.</p>
+    <p style="max-width:600px;margin:0 auto 30px;">A few wedding portraits, engagement highlights, and celebration moments from our studio. Browse the gallery for more photographs.</p>
   </div>
   <div class="gallery-masonry" id="galleryGrid">
 <div class="gallery-item gallery-item--landscape" data-category="bridal">
@@ -214,6 +214,22 @@
                               <i class="fa-solid fa-expand" aria-hidden="true"></i>
                               <span>View Photo</span>
                           </div>
+                      </div>
+<div class="gallery-item gallery-item--landscape" data-category="couple">
+                          <img src="photos/couple-03.webp" alt="Bride and groom looking back together on their wedding day" loading="lazy">
+                          <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                      </div>
+<div class="gallery-item gallery-item--landscape" data-category="engagement">
+                          <img src="photos/engagement-02.webp" alt="Couple celebrating their engagement with a bouquet" loading="lazy">
+                          <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                      </div>
+<div class="gallery-item gallery-item--landscape" data-category="ceremony">
+                          <img src="photos/rituals-01.webp" alt="Groom celebrating with family during the wedding procession" loading="lazy">
+                          <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
+                      </div>
+<div class="gallery-item gallery-item--portrait" data-category="kids">
+                          <img src="photos/kids-02.webp" alt="Young child in a red traditional outfit at a family celebration" loading="lazy">
+                          <div class="gallery-item-overlay"><i class="fa-solid fa-expand" aria-hidden="true"></i><span>View Photo</span></div>
                       </div>
     </div>
   <div class="text-center gallery-browse-wrap"><a href="photography.html" class="btn btn-gold">Browse Our Gallery <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
@@ -411,6 +427,14 @@
             });
 
             // Gallery Filter Logic
+            const galleryGrid = document.getElementById('galleryGrid');
+            const shuffledGalleryItems = Array.from(galleryGrid.children);
+            for (let index = shuffledGalleryItems.length - 1; index > 0; index -= 1) {
+                const randomIndex = Math.floor(Math.random() * (index + 1));
+                [shuffledGalleryItems[index], shuffledGalleryItems[randomIndex]] = [shuffledGalleryItems[randomIndex], shuffledGalleryItems[index]];
+            }
+            shuffledGalleryItems.forEach(item => galleryGrid.appendChild(item));
+
             const filterBtns = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
 
