@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="description" content="Prepare photography gallery images for the vindhaywasini Studio website.">
+    <meta name="theme-color" content="#faf8f4">
+    <title>Photo Prep | vindhaywasini Studio</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/css/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body class="admin-page">
+    <header class="admin-header">
+        <div class="admin-header-inner">
+            <a href="../index.html" class="logo">vindhaywasini<span>Photo Prep</span></a>
+            <a class="btn btn-outline-gold" href="../photography.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Gallery</a>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <section class="admin-intro">
+            <span class="subtitle-tag">Studio Tool</span>
+            <h1 class="font-serif">Prepare a Gallery Photo</h1>
+            <p>Resize and convert a batch of photos to WebP, then download the finished files to add to the site.</p>
+        </section>
+
+        <div class="admin-notice" role="note">
+            <i class="fa-solid fa-lock-open" aria-hidden="true"></i>
+            <p><strong>This page is not password-protected.</strong> Your selected photos stay in this browser and are not uploaded. Anyone who knows this address can use the tool.</p>
+        </div>
+
+        <section class="admin-card" aria-labelledby="photoSettingsHeading">
+            <h2 id="photoSettingsHeading" class="font-serif">Photo settings</h2>
+
+            <label class="admin-field admin-file-field" for="photoFiles">
+                <span>Choose photos</span>
+                <input id="photoFiles" type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/*" multiple>
+                <small>Select one or more JPEG, PNG, WebP, or other browser-supported images. Files are processed on this device.</small>
+            </label>
+
+            <div class="admin-fields-grid">
+                <label class="admin-field" for="filename">
+                    <span>File name prefix</span>
+                    <div class="admin-filename-wrap"><input id="filename" type="text" value="bridal" autocomplete="off" spellcheck="false"><span>-01.webp</span></div>
+                    <small>Files are named in order, for example <code>bridal-01.webp</code>, <code>bridal-02.webp</code>.</small>
+                </label>
+                <label class="admin-field" for="startNumber">
+                    <span>Start numbering at</span>
+                    <input id="startNumber" type="number" min="1" max="999999" step="1" value="1">
+                    <small>Selected photos follow in their file picker order.</small>
+                </label>
+                <label class="admin-field" for="targetKB">
+                    <span>Target file size per photo</span>
+                    <div class="admin-filename-wrap"><input id="targetKB" type="number" min="50" max="2000" step="10" value="200"><span>KB</span></div>
+                    <small>The tool automatically reduces image dimensions as needed to reach this size.</small>
+                </label>
+                <label class="admin-field" for="quality">
+                    <span>Starting WebP quality <output id="qualityValue" for="quality">82%</output></span>
+                    <input id="quality" type="range" min="50" max="100" value="82">
+                    <small>This is the highest quality used. The tool adjusts dimensions and, if needed, quality to meet your size target.</small>
+                </label>
+            </div>
+
+            <button id="convertButton" class="btn btn-gold admin-convert" type="button" disabled><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Convert Selected Photos</button>
+            <p id="status" class="admin-status" role="status" aria-live="polite">Choose one or more photos to get started.</p>
+        </section>
+
+        <section id="result" class="admin-results" aria-labelledby="resultHeading" hidden>
+            <div class="admin-results-heading">
+                <div><h2 id="resultHeading" class="font-serif">Converted photos</h2><p id="batchSummary" class="admin-summary"></p></div>
+                <button id="downloadZip" class="btn btn-gold" type="button"><i class="fa-solid fa-file-zipper" aria-hidden="true"></i> Download all as ZIP</button>
+            </div>
+            <div id="photoResults" class="admin-photo-results"></div>
+        </section>
+    </main>
+
+    <script src="./admin.js" defer></script>
+</body>
+</html>
