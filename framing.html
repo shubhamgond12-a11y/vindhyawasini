@@ -175,6 +175,14 @@
         </section>
     </main>
 
+    <div class="mobile-quick-bar" id="mobileQuickBar">
+        <div class="mobile-quick-grid" id="mobileQuickActions" aria-hidden="true" inert>
+            <a href="tel:+918896467546" class="mobile-quick-btn mobile-call-btn" aria-label="Call studio"><i class="fa-solid fa-phone"></i><span>Call Studio</span></a>
+            <a href="https://wa.me/918896467546?text=Hello%20vindhaywasini%20Video%20Mixing%20Lab%2C%20I%20am%20interested%20in%20custom%20photo%20framing." target="_blank" rel="noopener noreferrer" class="mobile-quick-btn mobile-whatsapp-btn" aria-label="Chat about photo framing on WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+        </div>
+        <button class="mobile-fab" id="mobileQuickToggle" type="button" aria-label="Open quick actions" aria-expanded="false" aria-controls="mobileQuickActions"><i class="fa-solid fa-plus"></i></button>
+    </div>
+
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -209,6 +217,17 @@
             mobileNavClose.addEventListener('click', closeMobileNav);
             navBackdrop.addEventListener('click', closeMobileNav);
             navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileNav));
+
+            const quickBar = document.getElementById('mobileQuickBar');
+            const quickToggle = document.getElementById('mobileQuickToggle');
+            const quickActions = document.getElementById('mobileQuickActions');
+            quickToggle.addEventListener('click', () => {
+                const isOpen = quickBar.classList.toggle('is-open');
+                quickToggle.setAttribute('aria-expanded', String(isOpen));
+                quickToggle.setAttribute('aria-label', isOpen ? 'Close quick actions' : 'Open quick actions');
+                quickActions.setAttribute('aria-hidden', String(!isOpen));
+                quickActions.inert = !isOpen;
+            });
 
             const deliveryAddressField = document.getElementById('frameDeliveryAddressField');
             const deliveryAddress = document.getElementById('frameDeliveryAddress');
