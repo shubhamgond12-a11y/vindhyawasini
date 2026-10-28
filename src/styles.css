@@ -940,6 +940,8 @@
 
         @media (max-width: 768px) {
             .section-padding { padding: 60px 0; }
+            .services-section,
+            .framing-section { padding-top: 132px; }
             .about-studio-grid { grid-template-columns: 1fr; gap: 18px; }
             .about-studio-grid .section-heading { text-align: center; }
             #packages.packages-section { padding-top: 112px; }
@@ -1230,7 +1232,7 @@
             position: static;
             left: auto;
             transform: none;
-            column-count: 4;
+            column-count: 5;
             column-gap: 8px;
         }
         #gallery .gallery-item,
