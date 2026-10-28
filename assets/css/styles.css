@@ -1374,6 +1374,9 @@
       margin-right: clamp(20px, 4vw, 64px);
       border-radius: 18px;
     }
+    .about-studio-grid > div:first-child {
+      padding-left: clamp(12px, 2vw, 32px);
+    }
   }
   .lightbox {
     position: fixed;
