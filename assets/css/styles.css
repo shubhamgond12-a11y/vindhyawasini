@@ -1589,6 +1589,9 @@
       grid-template-columns: 1fr;
       gap: 18px;
     }
+    .about-studio-grid > div:first-child {
+      text-align: center;
+    }
     .about-studio-grid .section-heading {
       text-align: center;
     }
