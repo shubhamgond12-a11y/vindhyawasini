@@ -588,10 +588,11 @@
     color: var(--color-gold-hover);
     font-size: 1.15rem;
   }
-  .service-card h3 {
+  .service-card h2 {
     margin-bottom: 8px;
     color: var(--color-text-light);
     font-size: 1.55rem;
+    font-weight: 700;
   }
   .service-card p {
     margin-bottom: 18px;
@@ -1342,7 +1343,36 @@
     margin: 0 !important;
   }
   .about-studio-section {
-    background: var(--color-surface);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-surface) 0%, #fbf6eb 100%);
+  }
+  .about-studio-section::before, .about-studio-section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    border: 1px solid rgba(168,121,22,0.14);
+    border-radius: 50%;
+  }
+  .about-studio-section::before {
+    width: 360px;
+    height: 360px;
+    top: -170px;
+    right: -90px;
+    box-shadow: 0 0 0 18px rgba(168,121,22,0.035), 0 0 0 38px rgba(168,121,22,0.025);
+  }
+  .about-studio-section::after {
+    width: 190px;
+    height: 190px;
+    bottom: -105px;
+    left: -55px;
+    background: rgba(242,227,198,0.16);
+  }
+  .about-studio-section > .container {
+    position: relative;
+    z-index: 1;
   }
   .about-studio-grid {
     display: grid;
@@ -1581,8 +1611,7 @@
     .section-padding {
       padding: 60px 0;
     }
-    .services-section,
-    .framing-section {
+    .services-section, .framing-section {
       padding-top: 132px;
     }
     .about-studio-grid {
