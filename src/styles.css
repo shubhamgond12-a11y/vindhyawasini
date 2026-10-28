@@ -946,6 +946,7 @@
             .services-section,
             .framing-section { padding-top: 132px; }
             .about-studio-grid { grid-template-columns: 1fr; gap: 18px; }
+            .about-studio-grid > div:first-child { text-align: center; }
             .about-studio-grid .section-heading { text-align: center; }
             #packages.packages-section { padding-top: 112px; }
             .packages-grid { grid-template-columns: 1fr; gap: 24px; }
