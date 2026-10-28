@@ -382,7 +382,7 @@
             color: var(--color-gold-hover);
             font-size: 1.15rem;
         }
-        .service-card h3 { margin-bottom: 8px; color: var(--color-text-light); font-size: 1.55rem; }
+        .service-card h2 { margin-bottom: 8px; color: var(--color-text-light); font-size: 1.55rem; font-weight: 700; }
         .service-card p { margin-bottom: 18px; font-size: 0.93rem; line-height: 1.7; }
         .service-card a { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--color-gold-hover); font-size: 0.82rem; font-weight: 700; }
         .service-card a:hover { color: var(--color-text-light); gap: 12px; }
@@ -739,7 +739,36 @@
         .insta-embed-card { min-width: 0; overflow: hidden; border: 1px solid rgba(168,121,22,0.14); border-radius: 12px; background: #fff; }
         .insta-embed-card .instagram-media { min-width: 0 !important; max-width: 100% !important; width: 100% !important; margin: 0 !important; }
 
-        .about-studio-section { background: var(--color-surface); }
+        .about-studio-section {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--color-surface) 0%, #fbf6eb 100%);
+        }
+        .about-studio-section::before,
+        .about-studio-section::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            border: 1px solid rgba(168,121,22,0.14);
+            border-radius: 50%;
+        }
+        .about-studio-section::before {
+            width: 360px;
+            height: 360px;
+            top: -170px;
+            right: -90px;
+            box-shadow: 0 0 0 18px rgba(168,121,22,0.035), 0 0 0 38px rgba(168,121,22,0.025);
+        }
+        .about-studio-section::after {
+            width: 190px;
+            height: 190px;
+            bottom: -105px;
+            left: -55px;
+            background: rgba(242,227,198,0.16);
+        }
+        .about-studio-section > .container { position: relative; z-index: 1; }
         .about-studio-grid { display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr); gap: clamp(32px, 7vw, 90px); align-items: start; }
         .about-studio-grid .section-heading { margin-top: 12px; text-align: left; }
         .about-studio-copy { color: var(--color-text-muted); }
