@@ -11,6 +11,8 @@
     const batchSummary = document.getElementById('batchSummary');
     const photoResults = document.getElementById('photoResults');
     const downloadZipButton = document.getElementById('downloadZip');
+    const galleryCode = document.getElementById('galleryCode');
+    const copyGalleryCodeButton = document.getElementById('copyGalleryCode');
     let selectedFiles = [];
     let convertedPhotos = [];
     let working = false;
@@ -40,6 +42,21 @@
         const prefix = slugify(filenameInput.value) || 'photo';
         const start = Math.max(1, Number.parseInt(startNumberInput.value, 10) || 1);
         return `${prefix}-${String(start + index).padStart(2, '0')}.webp`;
+    }
+
+    function makeGalleryCode() {
+        const category = slugify(filenameInput.value) || 'photo';
+        return convertedPhotos.map(photo => {
+            const layout = photo.width >= photo.height ? 'landscape' : 'portrait';
+            const alt = `${category} photograph from the Vindhaywasini Studio collection`;
+            return `<div class="gallery-item gallery-item--${layout}" data-category="${category}">
+    <img src="photos/${photo.name}" alt="${alt}" loading="lazy">
+    <div class="gallery-item-overlay">
+        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+        <span>View Photo</span>
+    </div>
+</div>`;
+        }).join('\n');
     }
 
     function addResultCard(photo) {
@@ -234,12 +251,14 @@
             const reduction = Math.max(0, Math.round((1 - outputBytes / originalBytes) * 100));
             const overTarget = convertedPhotos.filter(photo => !photo.withinTarget).length;
             batchSummary.textContent = `${convertedPhotos.length} photo(s) · ${formatBytes(originalBytes)} → ${formatBytes(outputBytes)} · ${reduction}% smaller in total${overTarget ? ` · ${overTarget} could not reach the ${targetKB} KB target` : ` · all at or below ${targetKB} KB`}`;
+            galleryCode.value = makeGalleryCode();
             result.hidden = false;
             setStatus('Batch ready. Download individual files or the ZIP, then upload the WebP files to the photos folder.');
         } catch (error) {
             setStatus(error instanceof Error ? error.message : 'Could not convert the selected photos.', true);
             if (convertedPhotos.length) {
                 batchSummary.textContent = `${convertedPhotos.length} of ${selectedFiles.length} photo(s) converted before the error.`;
+                galleryCode.value = makeGalleryCode();
                 result.hidden = false;
             }
         } finally {
@@ -268,6 +287,21 @@
         } finally {
             downloadZipButton.disabled = false;
             downloadZipButton.innerHTML = '<i class="fa-solid fa-file-zipper" aria-hidden="true"></i> Download all as ZIP';
+        }
+    });
+
+    copyGalleryCodeButton.addEventListener('click', async () => {
+        if (!galleryCode.value) return;
+        try {
+            await navigator.clipboard.writeText(galleryCode.value);
+            copyGalleryCodeButton.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> Copied';
+            setTimeout(() => {
+                copyGalleryCodeButton.innerHTML = '<i class="fa-solid fa-copy" aria-hidden="true"></i> Copy code';
+            }, 1600);
+        } catch {
+            galleryCode.focus();
+            galleryCode.select();
+            setStatus('Code is selected. Press Ctrl+C to copy it.', true);
         }
     });
 
