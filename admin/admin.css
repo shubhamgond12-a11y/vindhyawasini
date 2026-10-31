@@ -27,8 +27,8 @@
 .admin-fields-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 18px; }
 .admin-span-all { grid-column: 1 / -1; }
 .admin-filename-wrap { display: flex; align-items: center; border: 1px solid rgba(98, 93, 85, .22); border-radius: 9px; background: #fffefa; box-shadow: inset 0 1px 2px rgba(74, 54, 21, .03); }
-.admin-filename-wrap input:not([type="range"]) { min-width: 0; border: 0; background: transparent; }
-.admin-filename-wrap input:focus { outline: 0; }
+.admin-filename-wrap input:not([type="range"]), .admin-filename-wrap select { min-width: 0; border: 0; background: transparent; }
+.admin-filename-wrap input:focus, .admin-filename-wrap select:focus { outline: 0; }
 .admin-filename-wrap:focus-within { outline: 2px solid var(--color-gold); outline-offset: 2px; }
 .admin-filename-wrap > span { padding: 0 12px; color: var(--color-text-muted); font-size: .83rem; font-weight: 500; }
 .admin-field output { margin-left: auto; color: var(--color-gold-hover); }
