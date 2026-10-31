@@ -47,7 +47,19 @@
             <div class="admin-fields-grid">
                 <label class="admin-field" for="filename">
                     <span>File name prefix</span>
-                    <div class="admin-filename-wrap"><input id="filename" type="text" value="bridal" autocomplete="off" spellcheck="false"><span>-01.webp</span></div>
+                    <div class="admin-filename-wrap">
+                        <select id="filename" aria-label="Choose a Photography Gallery filter for the file name prefix">
+                            <option value="bridal">Bridal Portraits</option>
+                            <option value="couple">Wedding Couples</option>
+                            <option value="ceremony">Wedding Celebrations</option>
+                            <option value="prewedding">Pre-Wedding</option>
+                            <option value="haldi">Haldi &amp; Mehendi</option>
+                            <option value="engagement">Engagement</option>
+                            <option value="maternity">Maternity</option>
+                            <option value="kids">Kids</option>
+                            <option value="birthday">Birthday</option>
+                        </select><span>-01.webp</span>
+                    </div>
                     <small>Files are named in order, for example <code>bridal-01.webp</code>, <code>bridal-02.webp</code>.</small>
                 </label>
                 <label class="admin-field" for="startNumber">
