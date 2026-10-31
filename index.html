@@ -481,10 +481,13 @@
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     header.classList.add('scrolled');
+                    quickBar.classList.add('is-past-hero');
                 } else {
                     header.classList.remove('scrolled');
+                    quickBar.classList.remove('is-past-hero');
                 }
             });
+            window.dispatchEvent(new Event('scroll'));
 
             // Mobile Nav Toggle & Backdrop
             const mobileToggle = document.getElementById('mobileToggle');
