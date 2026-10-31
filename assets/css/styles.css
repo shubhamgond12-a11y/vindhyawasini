@@ -354,11 +354,39 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
   }
   .home-page header:not(.scrolled) {
-    background: rgba(16, 13, 10, 0.42);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(16px) saturate(125%);
-    -webkit-backdrop-filter: blur(16px) saturate(125%);
+    background: rgba(16, 13, 10, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px) saturate(115%);
+    -webkit-backdrop-filter: blur(10px) saturate(115%);
+  }
+  .home-page .hero-actions .btn {
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.035);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px) saturate(125%);
+    -webkit-backdrop-filter: blur(10px) saturate(125%);
+  }
+  .home-page .hero-actions .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 18%, rgba(255, 255, 255, 0.28) 42%, transparent 64%);
+    transform: translateX(-125%);
+    transition: transform .7s ease;
+  }
+  .home-page .hero-actions .btn:hover,
+  .home-page .hero-actions .btn:focus-visible {
+    border-color: rgba(255, 255, 255, 0.62);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.42), inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+  }
+  .home-page .hero-actions .btn:hover::before,
+  .home-page .hero-actions .btn:focus-visible::before {
+    transform: translateX(125%);
   }
   .nav-container {
     display: flex;
