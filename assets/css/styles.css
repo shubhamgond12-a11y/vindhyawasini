@@ -2183,6 +2183,62 @@
   .mobile-toggle {
     color: var(--color-text-light);
   }
+  .home-page .mobile-fab,
+  .home-page .mobile-quick-btn {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.045);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px) saturate(125%);
+    -webkit-backdrop-filter: blur(10px) saturate(125%);
+  }
+  .home-page .mobile-fab::before,
+  .home-page .mobile-quick-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 18%, rgba(255, 255, 255, 0.26) 42%, transparent 64%);
+    transform: translateX(-125%);
+    transition: transform .7s ease;
+  }
+  .home-page .mobile-fab:hover::before,
+  .home-page .mobile-fab:focus-visible::before,
+  .home-page .mobile-quick-btn:hover::before,
+  .home-page .mobile-quick-btn:focus-visible::before {
+    transform: translateX(125%);
+  }
+  .home-page .mobile-call-btn,
+  .home-page .mobile-whatsapp-btn {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .home-page .mobile-quick-bar.is-past-hero .mobile-fab {
+    border-color: transparent;
+    background: linear-gradient(135deg, #C99B3C, #A87916);
+    box-shadow: 0 10px 28px rgba(49, 39, 20, 0.25);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .home-page .mobile-quick-bar.is-past-hero .mobile-fab::before {
+    display: none;
+  }
+  .home-page .mobile-quick-bar.is-past-hero .mobile-quick-btn {
+    border-color: transparent;
+    box-shadow: 0 8px 24px rgba(28, 23, 18, 0.2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .home-page .mobile-quick-bar.is-past-hero .mobile-call-btn {
+    background: linear-gradient(135deg, #C99B3C, #A87916);
+  }
+  .home-page .mobile-quick-bar.is-past-hero .mobile-whatsapp-btn {
+    background: #25D366;
+  }
+  .home-page .mobile-quick-bar.is-past-hero .mobile-quick-btn::before {
+    display: none;
+  }
   .btn {
     border-radius: 999px;
     letter-spacing: 0.08em;
