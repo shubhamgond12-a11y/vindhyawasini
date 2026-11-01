@@ -525,6 +525,15 @@
             }
             shuffledGalleryItems.forEach(item => galleryGrid.appendChild(item));
 
+            const galleryReveal = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-visible');
+                    galleryReveal.unobserve(entry.target);
+                });
+            }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+            galleryReveal.observe(galleryGrid);
+
             const filterBtns = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
 
